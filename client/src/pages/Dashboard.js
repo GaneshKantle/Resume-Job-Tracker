@@ -186,7 +186,7 @@ function Dashboard() {
 
               {job.resumeUrl && (
                 <a
-                  href={`http://localhost:5000${job.resumeUrl}`}
+                  href={`https://resume-job-tracker.onrender.com${job.resumeUrl}`}
                   target="_blank"
                   rel="noreferrer"
                   style={{
