@@ -15,7 +15,7 @@ function Dashboard() {
 
   const fetchJobs = async () => {
     const token = localStorage.getItem("token");
-    const res = await axios.get("http://localhost:5000/api/jobs", {
+    const res = await axios.get("https://resume-job-tracker.onrender.com/api/jobs", {
       headers: { Authorization: token },
     });
     setJobs(res.data);
@@ -25,14 +25,14 @@ function Dashboard() {
     const formData = new FormData();
     formData.append("resume", file);
     const uploadRes = await axios.post(
-      "http://localhost:5000/api/resume/upload",
+      "https://resume-job-tracker.onrender.com/api/resume/upload",
       formData
     );
     const resumeUrl = uploadRes.data.url;
 
     const token = localStorage.getItem("token");
     await axios.post(
-      "http://localhost:5000/api/jobs",
+      "https://resume-job-tracker.onrender.com/api/jobs",
       {
         company,
         role,
