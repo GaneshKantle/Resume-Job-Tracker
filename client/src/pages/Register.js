@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', { email, password });
+      await axios.post('https://resume-job-tracker.onrender.com/api/auth/register', { email, password });
       navigate('/login');
     } catch (err) {
       alert('Registration Success');
