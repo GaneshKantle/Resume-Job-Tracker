@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: resume-job-tracker-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://ganeshkantle:Kantle%40mongodb%2337@resumejobtracker.ofad1ho.mongodb.net/resumejobtracker?retryWrites=true&w=majority&appName=resumejobtracker
+      - key: JWT_SECRET
+        value: Kantle@ResumeJobTracker37
